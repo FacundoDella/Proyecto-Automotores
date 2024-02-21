@@ -1,0 +1,40 @@
+.header-imagen {
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('/Imagenes/nuevo.jpg');
+    height: 55rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.header-imagen h1 {
+    margin-top: 30rem;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .header-imagen {
+        height: 50rem;
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .header-imagen {
+        height: 20rem;
+        width: 100%;
+
+    }
+
+    .header-imagen h1 {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+}
+

@@ -1,0 +1,678 @@
+/* Generales */
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #666666;
+    --grisOsculo: #3d3d3d;
+    --fondoBlanco: #FAFAFA;
+    --boton-rojo: #B60024;
+    --boton-gris: #4e4e4e;
+    --boton-hover-rojo: rgb(139, 0, 0);
+    --boton-hover-gris: rgb(56, 56, 56);
+    --nav-fijo: rgba(0, 0, 0, 0.7);
+    --fondo-body: #f3f3f3;
+    --fondo-vehiculo: #cacaca;
+    --rojo: #e0022e;
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4.2rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+h5 {
+    font-size: 2.2rem;
+}
+
+img {
+    object-fit: cover;
+    aspect-ratio: 1/ 1;
+}
+
+@media (max-width: 480px) {
+    .botones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .btn-rojo,
+    .btn-gris {
+        width: 80%;
+    }
+}
+
+
+.botones {
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.boton {
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--blanco);
+    margin: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        padding: 1.5rem 3rem;
+    }
+}
+
+.btn-rojo {
+    background-color: var(--boton-rojo);
+
+}
+
+.btn-rojo:hover {
+    background-color: var(--boton-hover-rojo);
+}
+
+
+.btn-gris {
+    background-color: var(--boton-gris);
+}
+
+.btn-gris:hover {
+    background-color: var(--boton-hover-gris);
+}
+
+
+.contenedor-general {
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .contenedor-general {
+        width: 90%;
+    }
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header de la pagina*/
+
+.imagen-correccion {
+    height: 975px !important;
+    object-fit: cover !important;
+}
+
+.imagen-header1 {
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('/Imagenes/Abrazandoauto.avif');
+    background-position: center center;
+}
+
+.imagen-header2 {
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('/Imagenes/hombre.jpg');
+    background-position: center center;
+}
+
+.imagen-header3 {
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('/Imagenes/Abrazandoauto.avif');
+    background-position: center center;
+}
+
+
+.imagen-header1,
+.imagen-header2,
+.imagen-header3 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-caption {
+    width: 70%;
+    color: var(--blanco);
+    padding: 1.25rem;
+    margin-bottom: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .carousel-caption {
+        width: 70%;
+        color: var(--negro);
+        padding: 1.25rem;
+        margin-bottom: 20rem;
+    }
+}
+
+@media (min-width: 479px) {
+    .carousel-caption {
+        margin-bottom: 15rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        margin-bottom: 30rem;
+    }
+}
+
+
+
+.carousel-titulo {
+    font-size: 6rem;
+    color: var(--blanco);
+}
+
+.carousel-titulo2 {
+    font-size: 4.5rem;
+    color: var(--blanco);
+}
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Bootstrap */
+
+.carousel-inner {
+    position: relative;
+    width: 300%;
+    display: flex;
+    margin-left: -100%;
+}
+
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Iconos de Prev y Next */
+.slider__btn {
+    position: absolute;
+    font-size: 6rem;
+    opacity: 50%;
+    color: var(--blanco);
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: monospace;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slider__btn:hover{
+    transition: 0.5s;
+    opacity: 80%;
+    color: var(--rojo);
+}
+
+.slider__btn--rigth {
+    right: 30px;
+}
+
+.slider__btn--left {
+    left: 30px;
+}
+
+/* Navegacion */
+
+
+.navegacion {
+    position: relative;
+    z-index: 1;
+    top: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin-top: -315px;
+}
+
+@media (min-width: 480px) {
+    .navegacion {
+        top: 330px;
+        margin-top: -315px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-top: -75px;
+    }
+}
+
+/* @media (max-width: 479px) {
+    .navegacion {
+        margin-bottom: 8rem;
+    }
+} */
+
+.navegacion a {
+    font-size: 1.8rem;
+    position: relative;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+
+
+.nav-fijo {
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: var(--nav-fijo);
+    transition: 0.7s;
+}
+
+.nav-fijo-pc {
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background-color: var(--nav-fijo);
+    transition: 0.7s;
+}
+
+/*contacto */
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 40%;
+}
+
+
+@media (min-width: 480px) {
+    .contacto {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 10;
+    background-color: var(--nav-fijo);
+    -webkit-box-shadow: 0px 0px 5px 9px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 0px 5px 9px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 0px 5px 9px rgba(0, 0, 0, 0.33);
+}
+
+.cerrar-menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+/* Porque comprar con nosotros? */
+
+.informacion {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--gris);
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-item {
+    width: 90%;
+    margin: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+    }
+
+    .info-item {
+        margin: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 996px) {
+    .info {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 2rem;
+    }
+
+    .info-item {
+        margin: 2rem;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+}
+
+.info-item {
+    -webkit-box-shadow: 10px 7px 42px 38px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 10px 7px 42px 38px rgba(0, 0, 0, 0.06);
+    box-shadow: 10px 7px 42px 38px rgba(0, 0, 0, 0.06);
+}
+
+.info-item h4 {
+    margin: 1rem;
+}
+
+.info-item svg {
+    margin-top: 2rem;
+}
+
+/* Opciones */
+
+.categorias-titulo {
+    color: var(--gris);
+    margin: 2rem;
+}
+
+.opciones {
+    color: var(--blanco);
+    -webkit-box-shadow: 0px 0px 75px -4px rgba(0, 0, 0, 0.64);
+    -moz-box-shadow: 0px 0px 75px -4px rgba(0, 0, 0, 0.64);
+    box-shadow: 0px 0px 75px -4px rgba(0, 0, 0, 0.64);
+    background-color: #69696971;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 60rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+    .opciones a {
+        width: 15rem;
+    }
+
+    .botones a {
+        width: 15rem;
+    }
+}
+
+
+.usados {
+    background: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.3)), url('Imagenes/usados.jpg');
+    background-position: center center;
+}
+
+.nuevos {
+    background: linear-gradient(rgba(5, 7, 12, 0.3), rgba(5, 7, 12, 0.3)), url('Imagenes/nuevo.jpg');
+}
+
+.usados,
+.nuevos {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+@media (min-width: 768px) {
+    .opciones {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        width: auto;
+        height: 40rem;
+        gap: 4rem;
+    }
+
+    .usados,
+    .nuevos {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4rem;
+    }
+}
+
+
+/* vehiculos-automatico */
+
+.vehiculos-automatico {
+    color: var(--gris);
+}
+
+.vehiculos-automatico h2 {
+    margin: 4rem;
+}
+
+.grid-vehiculos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .grid-vehiculos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 996px) {
+    .grid-vehiculos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin: 0;
+    }
+}
+
+
+
+.vehiculo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    background-color: var(--fondo-vehiculo);
+    -webkit-box-shadow: 0px 0px 75px -4px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 0px 75px -4px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 0px 75px -4px rgba(0, 0, 0, 0.45);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.vehiculo-imagen img {
+    width: 100%;
+    height: 25rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.vehiculo-nombre {
+    background-color: var(--rojo);
+    color: var(--blanco);
+    width: 100%;
+    font-size: 2rem;
+}
+
+.vehiculo-info {
+    background-color: var(--grisOsculo);
+    color: var(--blanco);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--grisOsculo);
+    color: var(--blanco);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.sobre-nosotros {
+    width: 90%;
+    text-align: center;
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.sobre-nosotros p {
+    font-size: 1.8rem;
+}
+
+.contacto-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contacto-info svg{
+    margin-right: 1rem;
+}
+
+.contacto a {
+    background-color: var(--gris);
+}
+
+
+@media (min-width: 996px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 6rem;
+    }
+
+    .sobre-nosotros {
+        width: 40%;
+        text-align: center;
+        background-color: var(--gris);
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .contacto-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
